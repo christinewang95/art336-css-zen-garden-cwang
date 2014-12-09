@@ -1,0 +1,364 @@
+/*
+1.  Road to Enlighment reduce to 1 column
+2.  arragne others - if possible hide text
+3.  change width (side bar) without overlapping 
+4.  2 break points
+5.  underline links
+6.  shrinking
+7.  get rid of sidebar images
+
+
+# CSS Zen Garden Project
+For this project you will be required to create your own <a href="http://www.csszengarden.com/" target="_blank" title="CSS Zen Garden">CSS Zen Garden</a> design and submit it to their site. You will start with the same blank template that all the other Zen Garden designs started with.
+
+## Requirements & Restrictions
+- Your site must be mobile first with at least 2 breakpoints.
+- HTML & CSS Only!
+- No jQuery or Javascript!
+- You must test your site on IE9, and Safari, Chrome, Firefox and iOS and Android.
+- You must read and follow the additional guidelines on the <a href="http://www.csszengarden.com/" target="_blank" title="CSS Zen Garden">CSS Zen Garden</a> website.
+
+## Other Notes
+- Images are saved in the root folder. This is the same location where your index.html and styles.css files are.
+- You will have your .scss files compile to the styles.css file. We will cover this slight change in class.
+
+
+  */
+
+
+@charset "UTF-8";
+/*
+Main Rules
+    This file simply compiles all the seperate files into a single file that will be outputted as main.css.
+*/
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+	 background: url(spacebackground.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+	
+	}
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+  font: 75% georgia, sans-serif;  
+  margin: 0; 
+  background-repeat: no-repeat;
+  background-position: right top; 
+  height: 100%;
+}
+
+p { 
+	margin-top: 0; 
+	
+	}
+h3 { 
+	font: italic normal 1.4em georgia, sans-serif;
+	letter-spacing: 1px; 
+	margin-bottom: 0; 
+	color: black;
+  font-weight: 800;
+	}
+a:link { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: #B7A5DF;
+	}
+a:visited { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: #D4CDDC;
+	}
+a:hover, a:focus, a:active { 
+	text-decoration: underline; 
+	color: #9685BA;
+	}
+abbr {
+	border-bottom: none;
+	}
+
+
+	
+/* specific divs */
+.page-wrapper { 
+	padding: 0 0px 0 0px;  
+	margin: 0; 
+	position: relative;
+	}	
+
+.intro { 	
+	width: 100%;	
+	}
+.intro h1{
+  font-size:  30px;
+};
+
+.intro h2{
+  font-size:  20px;
+};
+
+/*header h1 { 
+	background: transparent url(h1.gif) no-repeat top left;
+	margin-top: 10px;
+	display: block;
+	width: 219px;
+	height: 87px;
+	float: left;
+
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	}
+header h2 { 
+	background: transparent url(h2.gif) no-repeat top left; 
+	margin-top: 58px; 
+	margin-bottom: 40px; 
+	width: 200px; 
+	height: 18px; 
+	float: right;
+
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	}
+header {
+	padding-top: 20px;
+	height: 87px;
+} */
+
+
+
+	
+	
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: inline;
+}
+
+
+footer{
+font-size:18px;
+font-color:black;
+text-align: center;
+border: 1px solid gray;
+background-color: white;
+opacity: .6;
+};
+
+footer a:link{
+color:black;
+
+
+}
+
+.summary {
+	clear: right; 
+	margin: 20px 20px 20px 10px; 
+	
+	float: center;
+	font-weight: bold;
+	margin-left: auto ;
+	margin-right: auto ;
+	border: 1px solid gray;
+
+	}
+.summary p {
+	font-weight:  bold;
+	text-align: center;
+	margin-left: auto ;
+	margin-right: auto ;	
+	}
+	
+/*.preamble {
+	clear: right; 
+	padding: 0px 10px 0 10px;
+	width: 130px;
+  height:100px;
+	float: center;
+	font-weight: bold;
+	margin-left: auto ;
+  margin-right: 130px ;
+	background-color: #CCCCCC;
+  opacity: 0.4;
+  filter: alpha(opacity=40); /* For IE8 and earlier 
+  border-radius: 50%;
+	}*/
+
+.preamble p {
+	font-weight:  bold;
+	text-align: center;
+	margin-left: auto ;
+  margin-right: auto ;
+	}	
+
+.preamble h3{
+  text-align: center;
+  font-weight: bold;
+  color:black;
+}
+
+.supporting {	
+	padding-left: 10px; 
+	margin-bottom: 40px;
+	}
+	
+.sidebar {
+	margin-left: 600px; 
+	position: absolute; 
+	top: 0; 
+	right: 0;
+	}
+.sidebar .wrapper { 
+	font: 10px verdana, sans-serif; 	
+	padding: 10px; 
+	margin-top: 150px; 
+	width: 100px; 
+	}
+.sidebar h3.select { 
+	background: transparent url(h3.gif) no-repeat top left; 
+	margin: 10px 0 5px 0; 
+	width: 97px; 
+	height: 16px; 
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	}
+.sidebar h3.archives { 
+	background: transparent url(h5.gif) no-repeat top left; 
+	margin: 25px 0 5px 0; 
+	width:57px; 
+	height: 14px; 
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	}
+.sidebar h3.resources { 
+	background: transparent url(h6.gif) no-repeat top left; 
+	margin: 25px 0 5px 0; 
+	width:63px; 
+	height: 10px; 
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	}
+.sidebar ul {
+	margin: 0;
+	padding: 0;
+	}
+.sidebar li {
+	line-height: 1.3em; 
+	background: transparent url(cr1.gif) no-repeat top center; 
+	display: block; 
+	padding-top: 5px; 
+	margin-bottom: 5px;
+	list-style-type: none;
+	}
+.sidebar li a:link {
+	color: #000000;
+	}
+.sidebar li a:visited {
+	color: #B3AE94;
+	}
+.extra1 {
+	background: transparent url(cr2.gif) top left no-repeat; 
+	position: absolute; 
+	top: 40px; 
+	right: 0; 
+	width: 148px; 
+	height: 110px;
+	}
+
+nav, .zen-resources{
+  background-color: #EEEEEE;
+  opacity: 0.6;
+  filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
+nav li, .zen-resources li{
+  border-bottom: 3px solid white;
+  padding: 5px;
+}
+
+
+div[role="article"]{
+  background-color: #EEEEEE;
+  opacity: 0.6;
+  filter: alpha(opacity=60); /* For IE8 and earlier */
+  border-radius: 25px;
+  
+}
+
+div[role="article"] h3{
+  text-align: center;
+}
+
+div[role="article"] p{
+ /*visibility: hidden;*/
+ padding:3% 10% 0 10%; 
+}
+
+  .intro, #zen-supporting, div[role="article"] {
+    width:660px;
+    margin:0 auto 0 auto;
+  }
+
+
+@media screen and (min-width: 640px) and (max-width: 786px) {
+  .intro, #zen-supporting, div[role="article"] {
+    width:256px;
+    margin:0 15% 0 15%;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 639px) {
+  .intro, #zen-supporting, div[role="article"] {
+    width:192px;
+    margin:0 15% 0 15%;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width:360px) {
+  .intro, #zen-supporting{
+    width: 130px;
+    padding: 0 0px 0 0px;  
+    margin:0 15% 0 15%; 
+    position: relative;
+  }
+
+  div[role="article"]{
+    height: 135px;
+    width: 130px;
+    text-align: center;
+    margin-left: auto ;
+    margin-right: auto ;
+  }
+}
+
